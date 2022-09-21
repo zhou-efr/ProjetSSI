@@ -89,8 +89,8 @@
             while ($row = $result->fetch_assoc()) {
                 ?>
                 <div class="w-full flex items-start m-1 pr-6">
-                    <p class="font-bold tracking-wider w-1/5"><?php echo get_username($conn, $row['nomdutilisateur']); ?></p>
-                    <p class="ml-2 text-justify"><?php echo $row['commentaire']; ?></p>
+                    <p class="font-bold tracking-wider w-1/5"><?php echo htmlspecialchars(get_username($conn, $row['nomdutilisateur'])); ?></p>
+                    <p class="ml-2 text-justify"><?php echo htmlspecialchars($row['commentaire']); ?></p>
                 </div>
                 <?php
             }

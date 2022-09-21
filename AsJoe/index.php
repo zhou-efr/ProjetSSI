@@ -138,8 +138,8 @@
                     <p class="absolute top-5 left-5 text-xl">🔓️</p>
                     <p class="mx-14">
                         <?php
-                        echo "Logged as " . $_SESSION['nomdutilisateur'] . " <br/>";
-                        echo $_SESSION['donneespersonnelles'];
+                        echo "Logged as " . htmlspecialchars($_SESSION['nomdutilisateur']) . " <br/>";
+                        echo htmlspecialchars($_SESSION['donneespersonnelles']);
                         ?>
                     </p>
                 </div>
