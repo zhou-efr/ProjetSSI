@@ -23,8 +23,7 @@
             if ($conn->query($sql) === TRUE) {
                 $nothing = $nothing . "Comment successfully posted <br/>";
             } else {
-                # TODO: delete dev errors
-                $nothing = $nothing . "Error: " . $sql . "<br>" . $conn->error;
+                $nothing = $nothing . "Error: cannot post comment";
             }
         } else {
             $nothing = $nothing . "User not found <br/>";

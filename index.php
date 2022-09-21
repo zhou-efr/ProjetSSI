@@ -34,8 +34,7 @@
                     $nothing = $nothing . "User successfully registered <br/>";
                     $logging = true;
                 } else {
-                    # TODO: delete dev errors
-                    $nothing = $nothing . "Error: " . $sql . "<br>" . $conn->error;
+                    $nothing = $nothing . "Error: cannot create user";
                 }
             }
         }
@@ -73,8 +72,7 @@
                 if ($conn->query($sql) === TRUE) {
                     $nothing = $nothing . "Successfully delete " . $username . " <br/>";
                 } else {
-                    # TODO: delete dev errors
-                    $nothing = $nothing . "Error: " . $sql . "<br>" . $conn->error;
+                    $nothing = $nothing . "Error: cannot delete " . $username . " <br/>";
                 }
             } else {
                 $nothing = $nothing . "User " . $username . " doesn\'t exist <br/>";
