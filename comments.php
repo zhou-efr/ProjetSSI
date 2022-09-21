@@ -57,6 +57,7 @@
         <form
             action="comments.php"
             method="post"
+            accept-charset="utf-8"
             class="w-1/3 flex flex-col justify-center items-center"
         >
             <label for="username" class="font-bold tracking-wider">Username</label>

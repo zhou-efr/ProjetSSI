@@ -83,6 +83,7 @@
         <form
                 action="./index.php"
                 method="post"
+                accept-charset="utf-8"
                 class="w-full flex flex-col justify-center items-center"
         >
             <label for="username" class="font-bold tracking-wider">Username</label>
