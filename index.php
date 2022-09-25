@@ -1,7 +1,6 @@
 <header>
     <title>Super safe website</title>
     <link rel="stylesheet" href="./build.css">
-    <script src="https://cdn.tailwindcss.com"></script>
 </header>
 <body class="w-screen h-screen flex flex-col justify-center items-center">
     <div class="h-screen w-2/3 m-5 mb-14 flex flex-col items-center">
