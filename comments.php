@@ -22,12 +22,12 @@
             $id = $result->fetch_assoc()['id'];
             $sql = "insert into commentaires (nomdutilisateur, commentaire) values ('$id', '$comment')";
             if ($conn->query($sql) === TRUE) {
-                $nothing = $nothing . "Comment successfully posted <br/>";
+                $nothing = $nothing . "Comment successfully posted \n";
             } else {
                 $nothing = $nothing . "Error: cannot post comment";
             }
         } else {
-            $nothing = $nothing . "User not found <br/>";
+            $nothing = $nothing . "User not found \n";
         }
     }
 

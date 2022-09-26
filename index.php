@@ -27,11 +27,11 @@
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                $nothing = $nothing . "User already registered <br/>";
+                $nothing = $nothing . "User already registered \n";
             } else {
                 $sql = "insert into utilisateur (nomdutilisateur, donneespersonnelles) values ('$username', '$donneespersonnelles')";
                 if ($conn->query($sql) === TRUE) {
-                    $nothing = $nothing . "User successfully registered <br/>";
+                    $nothing = $nothing . "User successfully registered \n";
                     $logging = true;
                 } else {
                     $nothing = $nothing . "Error: cannot create user";
@@ -51,9 +51,9 @@
                 $_SESSION['nomdutilisateur'] = $row['nomdutilisateur'];
                 $_SESSION['donneespersonnelles'] = $row['donneespersonnelles'];
 
-                $nothing = $nothing . "Successfully logged in <br/>";
+                $nothing = $nothing . "Successfully logged in \n";
             } else {
-                $nothing = $nothing . "Failed to login <br/>";
+                $nothing = $nothing . "Failed to login \n";
             }
         }
 
@@ -70,12 +70,12 @@
 
                 $sql = "delete from utilisateur where id='$id' and nomdutilisateur='$username'";
                 if ($conn->query($sql) === TRUE) {
-                    $nothing = $nothing . "Successfully delete " . $username . " <br/>";
+                    $nothing = $nothing . "Successfully delete " . $username . " \n";
                 } else {
-                    $nothing = $nothing . "Error: cannot delete " . $username . " <br/>";
+                    $nothing = $nothing . "Error: cannot delete " . $username . " \n";
                 }
             } else {
-                $nothing = $nothing . "User " . $username . " doesn\'t exist <br/>";
+                $nothing = $nothing . "User " . $username . " doesn\'t exist \n";
             }
         }
         ?>
@@ -137,7 +137,7 @@
                     <p class="absolute top-5 left-5 text-xl">🔓️</p>
                     <p class="mx-14">
                         <?php
-                        echo "Logged as " . htmlspecialchars($_SESSION['nomdutilisateur']) . " <br/>";
+                        echo "Logged as " . htmlspecialchars($_SESSION['nomdutilisateur']) . " \n";
                         echo htmlspecialchars($_SESSION['donneespersonnelles']);
                         ?>
                     </p>
