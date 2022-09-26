@@ -127,7 +127,7 @@
         <div class="<?php if (!$nothing) {echo 'hidden';} ?> w-1/2 rounded-lg bg-yellow-100 flex flex-col justify-center text-center p-5 relative m-10">
             <p class="absolute top-5 left-5 text-xl">⚠️</p>
             <?php
-            echo $nothing;
+            echo htmlspecialchars($nothing);
             ?>
         </div>
         <?php
